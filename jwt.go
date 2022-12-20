@@ -59,6 +59,7 @@ func (c *Config) Claims(qsh string) *AtlassianClaims {
 			IssuedAt:  issuedAt.Unix(),
 			ExpiresAt: expiresAt.Unix(),
 			Issuer:    c.Key,
+			Subject:   c.ClientKey,
 		},
 	}
 }
